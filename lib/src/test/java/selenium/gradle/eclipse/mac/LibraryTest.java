@@ -6,6 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LibraryTest {
     @Test
     public void testAdd() {
-    	assertEquals(42, Integer.sum(19, 23));
+    	assertEquals(43, Integer.sum(19, 23));
     }
 }
