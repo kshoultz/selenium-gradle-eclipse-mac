@@ -11,7 +11,7 @@ public class LibraryTest {
     @Tag("fast")
 	@Test
     public void testAdd() {
-    	assertEquals(42, Integer.sum(19, 23));
+    	assertEquals(43, Integer.sum(19, 23));
     }
 	
 	@Tag("slow")
