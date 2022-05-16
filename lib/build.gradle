@@ -32,8 +32,9 @@ dependencies {
     
 }
 
-task seleniumTest(type: Test) {
-	useTestNG() {
-		useDefaultListeners = true
+test {
+	useJUnitPlatform {
+		includeTags 'fast'
+		excludeTags 'slow'	
 	}
 }
