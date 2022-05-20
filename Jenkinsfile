@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('Information Step') {
       parallel {
         stage('build') {
           steps {
@@ -20,9 +20,15 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('Build Step') {
       steps {
         sh './gradlew clean build'
+      }
+    }
+
+    stage('Test Step') {
+      steps {
+        sh './gradlew clean test'
       }
     }
 
