@@ -2,8 +2,21 @@ pipeline {
   agent any
   stages {
     stage('build') {
-      steps {
-        echo 'Initial pipeline commit.'
+      parallel {
+        stage('build') {
+          steps {
+            echo 'Initial pipeline commit.'
+          }
+        }
+
+        stage('Log Tools') {
+          steps {
+            sh '''java --version
+gradlew -v
+'''
+          }
+        }
+
       }
     }
 
