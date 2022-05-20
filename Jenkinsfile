@@ -12,7 +12,7 @@ pipeline {
         stage('Log Tools') {
           steps {
             sh '''java --version
-gradlew -v
+./gradlew -v
 '''
           }
         }
